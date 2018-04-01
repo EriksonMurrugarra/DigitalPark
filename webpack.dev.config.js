@@ -2,11 +2,11 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    digitalpark: path.resolve(__dirname, 'index.js'),
+    digitalpark: path.resolve(__dirname, 'src/entries/courses.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].dev.js'
   },
   devServer: {
     port: 9000,
@@ -36,7 +36,7 @@ module.exports = {
           options: {
             limit: 1000000,
             fallback: 'file-loader',
-            name: 'images/[name].[hash].[ext]',
+            name: 'images/[name].[ext]',
           }
         }
       },

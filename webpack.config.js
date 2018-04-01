@@ -17,7 +17,7 @@ module.exports = (env) => {
   return {
 
     entry: {
-      digitalpark: path.resolve(__dirname, 'index.js'),
+      digitalpark: path.resolve(__dirname, 'src/entries/courses.js')
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
