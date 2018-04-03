@@ -31,4 +31,4 @@ def lambda_handler(event, context):
       return 'DigitalPark Deployed!'
     except:
       topic.publish(Subject='DigitalPark Deployment Status. FAILED', Message='DigitalPark Deployment failed!')
-      return 'DigitalPark Failed Deployment!'
+      raise
