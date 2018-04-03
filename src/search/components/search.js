@@ -4,7 +4,7 @@ const Search = () => (
   <form>
     <input
       type="text"
-      placeholder="Busca Tu Curso"
+      placeholder="Busca tu curso"
     />
   </form>
 )
