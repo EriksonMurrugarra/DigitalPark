@@ -1,8 +1,8 @@
 version: 0.1
 phases:
   build:
-    commands: 
-      - echo Nothing to do yet
+    commands:
+      - npm run build:prod
 artifacts:
   files:
     - index.html
