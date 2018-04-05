@@ -1,5 +1,5 @@
-{
-  "categories": [
+export default () => {
+  return [
     {
       "id": 1,
       "title": "Docker & Kubernetes",
@@ -58,6 +58,20 @@
           "id": 24,
           "title": "Integracion Continua",
           "tags": "DEVOPS - JENKINS",
+          "image": "./images/covers/docker.png"
+        }
+      ]
+    },
+    ,
+    {
+      "id": 3,
+      "title": "Desarrollo Web",
+      "description": "Developing Web Sites",
+      "courses": [
+        {
+          "id": 31,
+          "title": "Aprendiendo ReactJS",
+          "tags": "WEB - REACTJS",
           "image": "./images/covers/docker.png"
         }
       ]

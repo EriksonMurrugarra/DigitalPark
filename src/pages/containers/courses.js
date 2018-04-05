@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CoursesLayout from '../components/courses-layout';
 import Categories from '../../categories/components/categories';
 import Header from '../../header/components/header';
+import { connect } from 'react-redux';
 
 class Courses extends Component {
 
@@ -16,4 +17,10 @@ class Courses extends Component {
 
 }
 
-export default Courses;
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categories
+  }
+}
+
+export default connect(mapStateToProps)(Courses);
