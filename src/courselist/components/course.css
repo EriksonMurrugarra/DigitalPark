@@ -22,11 +22,12 @@
 
 .Course-title {
   margin: 5px 0 0 0;
-  color: #44546b;
+  color: #FFFFFF;
   white-space: normal;
 }
 
 .Course-tags {
   font-size: 12px;
   margin: 5px 0 0 0;
+  color: #AAAAAA;
 }

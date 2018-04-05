@@ -4,11 +4,10 @@ import Search from '../../search/components/search';
 const Header = () => (
   <div>
     <h1> DigitalPark</h1>
-    <div>
-      <a> Registrate </a>
+    <div style={{ textAlign: 'center'}}>
+      <h2> Que quieres aprender Hoy? </h2>
+      <Search />
     </div>
-    <h2> Que quieres aprender Hoy? </h2>
-    <Search />
   </div>
 )
 
