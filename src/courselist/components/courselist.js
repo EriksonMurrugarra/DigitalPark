@@ -6,7 +6,7 @@ const CourseList = props => (
   <div className="CourseList">
     {
       props.courses.map(course => {
-        return <Course key={course.id} {...course} />
+        return <Course key={course.id} {...course} onCourseSelected={props.onCourseSelected}/>
       })
     }
   </div>
