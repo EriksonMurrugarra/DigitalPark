@@ -3,33 +3,35 @@ import CoursesLayout from '../components/courses-layout';
 import Categories from '../../categories/components/categories';
 import Header from '../../header/components/header';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { selectCourse, loadCourses } from '../../actions';
 import ModalCourseDetail from '../../modal-course-detail/components/modal-course-detail';
 
 class Courses extends Component {
 
-  state = {
-    selectedCourse: null
-  }
-
-  showCourseDetailModal = (course) => {
-    this.setState({
-      selectedCourse: course
-    })
+  componentDidMount () {
+    this.props.loadCourses();
   }
 
   render () {
     return (
       <CoursesLayout>
         <Header />
-        <Categories
+        {
+          this.props.categories &&
+          <Categories
           categories={this.props.categories}
-          onCourseSelected={this.showCourseDetailModal}
+          onCourseSelected={this.props.selectCourse}
           />
-        <ModalCourseDetail>
-          { this.state.selectedCourse &&
-            <h1> {this.state.selectedCourse.title}</h1>
-          }
-        </ModalCourseDetail>
+        }
+
+        {
+          this.props.selectedCourse &&
+          <ModalCourseDetail>
+            <h1>{this.props.selectedCourse.title}</h1>
+          </ModalCourseDetail>
+        }
+
       </CoursesLayout>
     )
   }
@@ -38,8 +40,16 @@ class Courses extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    categories: state.categories,
+    selectedCourse: state.selectedCourse
   }
 }
 
-export default connect(mapStateToProps)(Courses);
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({
+    selectCourse,
+    loadCourses }
+  , dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Courses);
