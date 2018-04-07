@@ -14,6 +14,7 @@ class Course extends PureComponent {
             width={260}
             height={180}
             className="Course-image"
+            onTouchStart={event => this.props.onCourseSelected(this.props)}
             onClick={event => this.props.onCourseSelected(this.props)}
           />
           <label className="Course-tags">{this.props.tags}</label>
