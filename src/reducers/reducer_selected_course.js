@@ -1,6 +1,8 @@
+import { COURSE_SELECTED } from '../actions';
+
 export default (state = null, action) => {
   switch(action.type) {
-    case 'COURSE_SELECTED':
+    case COURSE_SELECTED:
       return action.payload;
   }
 

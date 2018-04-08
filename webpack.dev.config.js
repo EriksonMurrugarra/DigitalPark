@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    digitalpark: path.resolve(__dirname, 'src/entries/courses.js')
+    digitalpark: path.resolve(__dirname, 'src/app.js')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
