@@ -10,7 +10,7 @@ class Course extends PureComponent {
         <div className="Course-cover">
           <img
             src={ this.props.image }
-            alt=""
+            alt={ this.props.image }
             width={260}
             height={180}
             className="Course-image"
