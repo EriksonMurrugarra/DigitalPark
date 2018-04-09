@@ -4,8 +4,9 @@ phases:
     commands:
       - npm install
       - npm run build:prod
+      - cp index.prod.html dist/index.html
 artifacts:
   files:
-    - index.html
+    - dist/index.html
     - dist/js/*
     - dist/css/*
