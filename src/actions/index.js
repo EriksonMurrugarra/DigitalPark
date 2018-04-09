@@ -11,7 +11,7 @@ export function selectCourse(course) {
 }
 
 export function loadCourses() {
-  const request = axios.get('http://localhost:8080/api.json');
+  const request = axios.get('https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev/courses-catalog');
 
   return {
     type: LOAD_COURSES,
