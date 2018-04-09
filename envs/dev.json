@@ -1,0 +1,4 @@
+{
+  "APP_TITLE": "DigitalPark Dev",
+  "APP_API": "http://localhost:8080/courses-catalog.json"
+}

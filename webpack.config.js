@@ -1,7 +1,8 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-
+const ExtendDefinePlugin = require('extended-define-webpack-plugin');
+const ProdEnv = require('./envs/prod.json');
 
 module.exports = (env) => {
   const plugins = [
@@ -11,6 +12,10 @@ module.exports = (env) => {
   if (env.NODE_ENV === 'production') {
     plugins.push(
       new CleanWebpackPlugin(['dist'], {root: __dirname})
+    )
+
+    plugins.push(
+      new ExtendDefinePlugin(ProdEnv)
     )
   }
 

@@ -1,4 +1,6 @@
 const path = require('path');
+const ExtendDefinePlugin = require('extended-define-webpack-plugin');
+const DevEnv = require('./envs/dev.json');
 
 module.exports = {
   entry: {
@@ -41,5 +43,8 @@ module.exports = {
         }
       },
     ]
-  }
+  },
+  plugins: [
+    new ExtendDefinePlugin(DevEnv)
+  ]
 }
