@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import CoursesLayout from '../components/courses-layout';
 import Categories from '../../categories/components/categories';
-import Header from '../../header/components/header';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { selectCourse, loadCourses } from '../../actions';
 import ModalCourseDetail from '../../modal-course-detail/components/modal-course-detail';
+import Search from '../../search/components/search';
 
 class Courses extends Component {
 
@@ -16,7 +16,10 @@ class Courses extends Component {
   render () {
     return (
       <CoursesLayout>
-        <Header />
+        <div style={{ textAlign: 'center'}}>
+          <h2> Que quieres aprender Hoy? </h2>
+          <Search />
+        </div>
         {
           this.props.categories &&
           <Categories

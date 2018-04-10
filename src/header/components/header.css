@@ -1,0 +1,7 @@
+.Header {
+  display: flex;
+}
+
+.Header > ul > li > a {
+  color: white;
+}

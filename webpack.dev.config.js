@@ -8,10 +8,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].dev.js'
+    filename: 'js/[name].dev.js',
+    publicPath: '/'
   },
   devServer: {
     port: 9000,
+    historyApiFallback: true
   },
   module: {
     rules: [
