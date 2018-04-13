@@ -4,7 +4,6 @@ import Categories from '../../categories/components/categories';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { selectCourse, loadCourses } from '../../actions';
-import ModalCourseDetail from '../../modal-course-detail/components/modal-course-detail';
 import Search from '../../search/components/search';
 
 class Courses extends Component {
@@ -24,17 +23,8 @@ class Courses extends Component {
           this.props.categories &&
           <Categories
           categories={this.props.categories}
-          onCourseSelected={this.props.selectCourse}
           />
         }
-
-        {
-          this.props.selectedCourse &&
-          <ModalCourseDetail>
-            <h1>{this.props.selectedCourse.title}</h1>
-          </ModalCourseDetail>
-        }
-
       </CoursesLayout>
     )
   }

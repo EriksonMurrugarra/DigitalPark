@@ -10,7 +10,6 @@ const Categories = props => {
             key={category.id}
             title={category.title}
             courses={category.courses}
-            onCourseSelected={props.onCourseSelected}
           />
         })
       }

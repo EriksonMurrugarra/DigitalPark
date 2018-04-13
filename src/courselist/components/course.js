@@ -1,12 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 import './course.css';
+
 
 class Course extends PureComponent {
 
   render () {
+    const courseLink = `/course/${this.props.id}`;
     return (
       <div className="Course">
+        <Link to={courseLink}>
         <div className="Course-cover">
           <img
             src={ this.props.image }
@@ -14,12 +18,11 @@ class Course extends PureComponent {
             width={260}
             height={180}
             className="Course-image"
-            onTouchStart={event => this.props.onCourseSelected(this.props)}
-            onClick={event => this.props.onCourseSelected(this.props)}
           />
           <label className="Course-tags">{this.props.tags}</label>
           <h3 className="Course-title">{this.props.title}</h3>
         </div>
+        </Link>
       </div>
     )
   }

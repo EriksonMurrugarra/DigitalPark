@@ -1,11 +1,11 @@
 import React from 'react';
 import CourseList from '../../courselist/components/courselist';
 
-const Category = ({title, courses, onCourseSelected}) => {
+const Category = ({title, courses}) => {
   return (
     <div>
       <h2>{title}</h2>
-      <CourseList courses={courses} onCourseSelected={onCourseSelected}/>
+      <CourseList courses={courses}/>
     </div>
   )
 }

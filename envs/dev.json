@@ -1,4 +1,5 @@
 {
   "APP_TITLE": "DigitalPark Dev",
-  "APP_API": "http://localhost:8080/courses-catalog.json"
+  "APP_API": "https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev/courses-catalog"
+
 }
