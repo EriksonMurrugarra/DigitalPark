@@ -1,4 +1,6 @@
 {
   "APP_TITLE": "DigitalPark",
-  "APP_API": "https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev/courses-catalog"
+  "APP_COURSES_CATALOG_API": "https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev/courses-catalog",
+  "APP_COURSE_DETAIL_API": "https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev/course-detail",
+  "APP_BLOG_ENTRIES_API": "https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev/blog-entries"
 }

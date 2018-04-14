@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CoursesLayout from '../components/courses-layout';
 import Categories from '../../categories/components/categories';
+// redux
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { selectCourse, loadCourses } from '../../actions';
@@ -24,6 +25,10 @@ class Courses extends Component {
           <Categories
           categories={this.props.categories}
           />
+        }
+        {
+          !this.props.categories &&
+            <h1> Loading... </h1>
         }
       </CoursesLayout>
     )
