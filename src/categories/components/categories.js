@@ -7,7 +7,7 @@ const Categories = props => {
       {
         props.categories.map(category => {
           return <Category
-            key={category.id}
+            key={category.catecode}
             title={category.title}
             courses={category.courses}
           />

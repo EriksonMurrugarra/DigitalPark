@@ -7,7 +7,7 @@ const CourseList = props => (
     {
       props.courses.map(course => {
         return <Course
-          key={course.id} {...course}/>
+          key={course.coursecode} {...course}/>
       })
     }
   </div>

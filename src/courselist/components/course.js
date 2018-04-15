@@ -7,7 +7,7 @@ import './course.css';
 class Course extends PureComponent {
 
   render () {
-    const courseLink = `/course/${this.props.id}`;
+    const courseLink = `/course/${this.props.coursecode}`;
     return (
       <div className="Course">
         <Link to={courseLink}>
@@ -20,7 +20,7 @@ class Course extends PureComponent {
             className="Course-image"
           />
           <label className="Course-tags">{this.props.tags}</label>
-          <h3 className="Course-title">{this.props.title}</h3>
+          <h3 className="Course-title">{this.props.name}</h3>
         </div>
         </Link>
       </div>
@@ -31,7 +31,7 @@ class Course extends PureComponent {
 Course.propTypes = {
   image: PropTypes.string.isRequired,
   tags: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired
 }
 
 export default Course;

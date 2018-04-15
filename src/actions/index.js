@@ -13,7 +13,7 @@ export function selectCourse(course) {
 }
 
 export function loadCourses() {
-  const request = axios.get(APP_COURSES_CATALOG_API);
+  const request = axios.get(`${APP_API}/courses`);
 
   return {
     type: LOAD_COURSES,
@@ -22,7 +22,7 @@ export function loadCourses() {
 }
 
 export function loadCourseDetail (courseId) {
-  const request = axios.get(APP_COURSE_DETAIL_API);
+  const request = axios.get(`${APP_API}/courses/${courseId}`);
 
   return {
     type: LOAD_COURSE_DETAIL,
@@ -31,7 +31,7 @@ export function loadCourseDetail (courseId) {
 }
 
 export function loadBlogEntries() {
-  const request = axios.get(APP_BLOG_ENTRIES_API);
+  const request = axios.get(`${APP_API}/blogs`);
 
   return {
     type: LOAD_BLOG_ENTRIES,
