@@ -1,4 +1,4 @@
 {
   "APP_TITLE": "DigitalPark Dev",
-  "APP_API": "https://0cb7i36obc.execute-api.us-east-1.amazonaws.com/dev"
+  "APP_API": "https://devapi.digitalparl.io"
 }
