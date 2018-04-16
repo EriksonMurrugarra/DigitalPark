@@ -26,7 +26,7 @@ def lambda_handler(event, context):
 
       #declare buckets
       s3 = boto3.resource('s3')
-      digitalpark_bucket = s3.Bucket('www.digitalpark.io')
+      digitalpark_bucket = s3.Bucket('digitalpark.io')
       build_bucket = s3.Bucket(location["bucketName"])
 
       #download from build bucket
